@@ -86,6 +86,10 @@ Shifting strategy, I focused on improving the loss function:
 
 - 🈳 **Add Persian sarcasm data** to evaluate XLM-R's multilingual capabilities  
 - 🧠 Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively
+
+### 🔗 Download Trained Model
+
+You can download the trained model checkpoint (`best_model.ckpt`) from [this Google Drive link] (https://drive.google.com/file/d/1c9wIv9qYzPWo9v7V2_Awfe63UF53kDyS/view?usp=drive_link).
   
 ## 🛠 How to Use:
 ## $ Multilingual___Multimodal_Sarcasm_Detection.py
