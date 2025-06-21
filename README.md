@@ -88,7 +88,7 @@ Shifting strategy, I focused on improving the loss function:
 - 🧠 Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively
   
 ## 🛠 How to Use:
-## $ python inference.py
+## $ Multilingual___Multimodal_Sarcasm_Detection.py
 📝 Enter a tweet: Oh great, another Monday!😢
 
 🔍 Prediction: Sarcastic 🤨
