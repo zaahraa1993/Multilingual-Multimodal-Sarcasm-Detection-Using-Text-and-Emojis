@@ -69,9 +69,9 @@ class SarcasmDataset(Dataset):
         }
 
 tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
-train_df = pd.read_parquet("/content/drive/MyDrive/train-00000-of-00001.parquet")
-val_df   = pd.read_parquet("/content/drive/MyDrive/validation-00000-of-00001.parquet")
-test_df  = pd.read_parquet("/content/drive/MyDrive/test-00000-of-00001.parquet")
+train_df = pd.read_parquet("/data/train-00000-of-00001.parquet")
+val_df   = pd.read_parquet("/data/validation-00000-of-00001.parquet")
+test_df  = pd.read_parquet("/data/test-00000-of-00001.parquet")
 train_df['clean_text'] = train_df['text'].apply(clean_text)
 train_df['emojis'] = train_df['text'].apply(extract_emojis)
 
