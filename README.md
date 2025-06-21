@@ -74,8 +74,11 @@ Shifting strategy, I focused on improving the loss function:
 - Classification Report:
 
                 precision    recall  f1-score   support
+  
     sarcastic       0.61      0.75      0.67       311
+  
   non-sarcastic     0.81      0.68      0.74       473
+  
      accuracy                           0.71       784
 
 ## 🚀 What's Next?
