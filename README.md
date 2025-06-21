@@ -71,15 +71,16 @@ Shifting strategy, I focused on improving the loss function:
 - **F1-score (sarcastic)**: improved from **0.63 → 0.67**  
 - **Test Accuracy**: **0.71**
 
-- Classification Report:
+### 📊 Final Test Set Performance
 
-                precision    recall  f1-score   support
-  
-    sarcastic       0.61      0.75      0.67       311
-  
-  non-sarcastic     0.81      0.68      0.74       473
-  
-     accuracy                           0.71       784
+| Class          | Precision | Recall | F1-score | Support |
+|----------------|-----------|--------|----------|---------|
+| non-sarcastic  | 0.81      | 0.68   | 0.74     | 473     |
+| sarcastic      | 0.61      | 0.75   | 0.67     | 311     |
+| **Accuracy**   |           |        | **0.71** | **784** |
+| **Macro Avg**  | 0.71      | 0.72   | 0.70     | 784     |
+| **Weighted Avg** | 0.73    | 0.71   | 0.71     | 784     |
+
 
 ## 🚀 What's Next?
 
