@@ -85,5 +85,11 @@ Shifting strategy, I focused on improving the loss function:
 ## 🚀 What's Next?
 
 - 🈳 **Add Persian sarcasm data** to evaluate XLM-R's multilingual capabilities  
-- 🧠 Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively  
+- 🧠 Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively
+  
+## 🛠 How to Use:
+## $ python inference.py
+📝 Enter a tweet: Oh great, another Monday!😢
 
+🔍 Prediction: Sarcastic 🤨
+📊 Probabilities → Non-sarcastic: 0.18, Sarcastic: 0.82
