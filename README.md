@@ -1,6 +1,6 @@
 # Multilingual-Multimodal-Sarcasm-Detection-Using-Text-and-Emojis
 
-## 🧠 Model Overview
+## Model Overview
 
 This project implements a **multimodal sarcasm detection model** for tweets using:
 
@@ -26,7 +26,7 @@ We designed this architecture to handle both:
 
 
 
-## ⚙️ Optimization Journey
+##  Optimization Journey
 
 The model was initially fine-tuned with **all transformer layers unfrozen**, which led to **overfitting**:  
 - **Train Accuracy**: ~0.85  
@@ -35,10 +35,10 @@ The model was initially fine-tuned with **all transformer layers unfrozen**, whi
 
 To mitigate this, I applied several regularization strategies:
 
-- 🔒 **Freezing early transformer layers** (initially only layers 10–11 were trainable)  
-- 🔁 Introduced **Dropout** (started at 0.5, later tuned) and **Weight Decay** (`0.01`)  
-- 📉 Used `ReduceLROnPlateau` as the learning rate scheduler  
-- 🎯 Applied **class weights** in the loss function to address class imbalance  
+-  **Freezing early transformer layers** (initially only layers 10–11 were trainable)  
+-  Introduced **Dropout** (started at 0.5, later tuned) and **Weight Decay** (`0.01`)  
+-  Used `ReduceLROnPlateau` as the learning rate scheduler  
+-  Applied **class weights** in the loss function to address class imbalance  
 
 🟢 **Result:**  
 - `val_acc ≈ 0.67`, `train_acc_epoch ≈ 0.79`  
@@ -46,7 +46,7 @@ To mitigate this, I applied several regularization strategies:
 non-sarcastic: f1 = 0.70
 sarcastic: f1 = 0.63 (recall = 0.58)
 
-## 🤖 Data Augmentation Experiments
+##  Data Augmentation Experiments
 To improve recall on the sarcastic class (which was initially just 0.52), I tried targeted data augmentation:
 
 1) Added external sarcastic samples from SemEval dataset
@@ -57,13 +57,13 @@ To improve recall on the sarcastic class (which was initially just 0.52), I trie
 
 These additions helped on training/validation, but test set performance dropped, likely due to domain mismatch and noisy generation.
 
-## 🎯 Loss-Level Optimization
+##  Loss-Level Optimization
 
 Shifting strategy, I focused on improving the loss function:
 
-- 🔥 Introduced **Focal Loss** to give more weight to hard-to-classify sarcastic samples  
-- 🔓 **Unfroze more transformer layers (7–11)**  
-- ⬆️ **Increased Dropout** to strengthen generalization
+-  Introduced **Focal Loss** to give more weight to hard-to-classify sarcastic samples  
+-  **Unfroze more transformer layers (7–11)**  
+-  **Increased Dropout** to strengthen generalization
 
 ✅ This final setup yielded:
 
@@ -82,17 +82,17 @@ Shifting strategy, I focused on improving the loss function:
 | **Weighted Avg** | 0.73    | 0.71   | 0.71     | 784     |
 
 
-## 🚀 What's Next?
+##  What's Next?
 
-- 🈳 **Add Persian sarcasm data** to evaluate XLM-R's multilingual capabilities  
-- 🧠 Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively
+-  **Add Persian sarcasm data** to evaluate XLM-R's multilingual capabilities  
+-  Explore **Contrastive Learning** to separate literal vs sarcastic intent more effectively
 
-### 🔗 Download Trained Model
+###  Download Trained Model
 
 You can download the trained model checkpoint (`best_model.ckpt`) from [this Google Drive link] (https://drive.google.com/file/d/1c9wIv9qYzPWo9v7V2_Awfe63UF53kDyS/view?usp=drive_link).
   
-## 🛠 How to Use:
-## $ Multilingual___Multimodal_Sarcasm_Detection.py
+##  How to Use:
+##  Multilingual___Multimodal_Sarcasm_Detection.py
 📝 Enter a tweet: Oh great, another Monday!😢
 
 🔍 Prediction: Sarcastic 🤨
